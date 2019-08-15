@@ -11,13 +11,11 @@ const Mine = (props)=>{
         {id: 3, name: '我关注的用户', path: ''},
         {id: 4, name: '关注我的用户', path: ''},
         {id: 5, name: '我赞过的观点', path: ''},
-
     ];
 
     return (
         <div className="page" id="mine">
             <Header title="我的" />
-
             <div className="mine-banner">
                 <Link>头像</Link>
                 <Link><span>李雪琴</span><span>女</span></Link>
