@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link, Switch} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import './style.scss'
 
 import Header from '../../../components/app-header/app-header'
@@ -11,7 +11,6 @@ const Mine = (props)=>{
         {id: 3, name: '我关注的用户', path: ''},
         {id: 4, name: '关注我的用户', path: ''},
         {id: 5, name: '我赞过的观点', path: ''},
-
     ];
 
     return (

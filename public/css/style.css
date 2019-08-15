@@ -10,8 +10,8 @@ html, body, #app-root, .app{
     bottom: 49px;
 }
 .page.subpage{
-    bottom: 0;
-    z-index: 10;
+    /* bottom: 0;
+    z-index: 10; */
 }
 .page .content{
     width: 100%;

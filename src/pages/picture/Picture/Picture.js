@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link, Switch} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import './style.scss'
 
 import Header from '../../../components/app-header/app-header'
