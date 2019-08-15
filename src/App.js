@@ -19,7 +19,7 @@ const AppPanel = (props)=>{
             <div className="app">
                 <Switch>
                     <Route path="/" exact render={()=>{
-                        return <Redirect to="/home" />
+                        return <Redirect to="/news" />
                     }}/>
                     <Route path="/news" component={News}/>
                     <Route path='/picture/:flag' component={Picture}/>
