@@ -4,6 +4,8 @@ import {connect} from 'react-redux';
 import Loading from './pages/common/Loading/Loading'
 import TabBar from './components/tab-bar/tab-bar'
 
+
+
 const Mine = lazy(()=>import('./pages/mine/Mine/Mine'));
 const News = lazy(()=>import('./pages/news/News/News'));
 const Picture = lazy(()=>import('./pages/picture/Picture/Picture'));

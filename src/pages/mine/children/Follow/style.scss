@@ -1,4 +1,57 @@
-#follow{
+.scroll-wrap{
     width: 100%;
     height: 100%;
+}
+#follow{
+    width: 100%;height: 100%;
+    background-color: #F1F1F1;
+    z-index: 10;
+    .follow-wrap{
+        width: 100%;
+        height: 100%;
+        background-color: #F1F1F1;
+        .five-pt{
+            height: 5pt;
+        }
+        .follow-con{
+            background-color: #fff;
+            padding-left: 20pt;
+            li{
+                display: flex;
+                margin-right: 5pt;
+                justify-content: space-between;
+                border-bottom: 1px solid #F1F1F1;
+                .context{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-top: 10pt;
+                    margin-bottom: 30pt;
+                    img{
+                        border-radius: 50%;
+                        margin-right: 11pt;
+                    }
+                    .name{
+                        color: #666;
+                    }
+                    .sex{
+                        margin-left: 6pt;
+                    }
+                }
+                .to-next{
+                    font-size: 1.875rem;
+                    align-self: center;
+                    color: #999;
+                }
+            }
+        }
+    }
+    .no-more{
+        padding-bottom: 4.375rem;
+        background-color: #f1f1f1;
+        color: #999;
+        text-align: center;
+        padding-top: 5pt;
+        font-size: .875rem;
+    }
 }
