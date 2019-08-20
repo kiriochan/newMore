@@ -6,14 +6,15 @@
     left:0;
     line-height: 44px;
     text-align: center;
+    background:#f7f7f7;
 }
 .body_ul{
     width:100%;
-    overflow:auto;
+    overflow:hidden;
     position: absolute;
     top:44px;
     left:0;
-    bottom:0px;
+    bottom:0;
 }
 #img{
     display:inline-block;

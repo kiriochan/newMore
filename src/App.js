@@ -12,6 +12,7 @@ const Discover = lazy(()=>import('./pages/discover/Discover/Discover'));
 const NotFind = lazy(()=>import('./pages/common/NotFind/NotFind'));
 const Login = lazy(()=>import('./pages/common/Login/Login'));
 const Coupon = lazy(()=>import('./pages/common/Coupon/Coupon'));
+const History = lazy(()=>import('./pages/news/News/children/history'))
 
 const AppPanel = (props)=>{
     return (
@@ -29,6 +30,7 @@ const AppPanel = (props)=>{
                 </Switch>
                 
                 <Route path='/discover/coupon' component={Coupon} />
+                <Route path='/news/history' component={History} />
                 <TabBar />
             </div>
         </Router>

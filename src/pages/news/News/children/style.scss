@@ -1,0 +1,60 @@
+#history{
+    position: absolute;
+    left:0;
+    top:0;
+    bottom:0;
+    width:100%;
+    background:#e8e8e8;
+    z-index: 2;
+}
+.h_header{
+    height:44px;
+    width:100%;
+    position: absolute;
+    left:0;
+    top:0;
+    text-align:center;
+    line-height: 44px;
+    background:#f7f7f7;
+}
+.h_span{
+    position: absolute;
+    left: 10px;
+    top:0;
+}
+.h_ul{
+    width:100%;
+    position: absolute;
+    left:0;
+    top:44px;
+    bottom:0;
+    background:#fff;
+}
+.h_li{
+    height:110px;
+    position: relative;
+}
+.h_3{
+    position: absolute;
+    left: 100px;
+    top: 10px;
+}
+.h_p1{
+    position: absolute;
+    left: 100px;
+    top: 40px;
+}
+.h_p2{
+    position: absolute;
+    left: 100px;
+    top: 60px;
+}
+.h_img{
+    width: 80px;
+    height: 80px;
+    display:inline-block;
+}
+.h_p3{
+    text-align:center;
+    margin-top:0px;
+}

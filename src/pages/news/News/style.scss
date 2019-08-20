@@ -5,11 +5,13 @@
     position: absolute;
     left: 10px;
     top: 10px;
+    font-size: 25px;
 }
 .span_f2{
     position: absolute;
     right: 10px;
     top: 10px;
+    font-size: 25px;
 }
 .swiper-container{
     position: absolute;
@@ -17,8 +19,8 @@
     top:44px;
 }
 .img{
-    // width:214px;
-    // height:300px;
+    width:214px;
+    height:300px;
     display:inline-block;
 }
 
@@ -62,3 +64,17 @@
 // .swiper-slide:nth-child(3n) {
 //     width: 20%;
 // }
+
+.n_box{
+    width:100%;
+    position: absolute;
+    top: 360px;
+    text-align:center;
+}
+.n_wrap{
+    width:100%;
+    position: absolute;
+    left:0;
+    top:0;
+    bottom:0;
+}
