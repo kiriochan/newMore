@@ -10,8 +10,7 @@ export default class commented extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            gData: [],
-            flagZan: true
+            gData: []
         };
     }
 
@@ -21,7 +20,7 @@ export default class commented extends React.Component{
             this.setState({
                 gData:res.data.data.list
             })
-            console.log(res.data.data.list)
+            // console.log(res.data.data.list)
         })
         .catch((err)=>{
             console.log(err)
@@ -31,7 +30,7 @@ export default class commented extends React.Component{
     render(){
         return (
             <div className="page" id="commented">
-                <Header title="我评论过的" left={
+                <Header title="我的观点" left={
                     <span className="iconfont icon-fanhui"></span>
                 } leftClick={this.backAction}/>
 
@@ -41,7 +40,7 @@ export default class commented extends React.Component{
 
                     <ul className="commented-con">
                     {  
-                        this.state.gData.map(item=>(
+                        this.state.gData.map((item,index)=>(
                             <li key={item.id} className="commented-list">
                                 <div className="com-con">
                                     <div className="com-personal">
@@ -49,9 +48,9 @@ export default class commented extends React.Component{
                                         <img src="/images/mine/mine page_pic.png" alt="" className="com-head"/>
                                         <span>李雪琴</span>
                                         </div>
-                                        <div className="com-zan" onClick={this.dianzan.bind(this,(item.id))}>
+                                        <div className="com-zan" onClick={this.dianzan.bind(this,index)}>
                                         {
-                                            this.state.flagZan ?
+                                            item.flagZan ?
                                             <img src="/images/mine/mine_praise_icon.png" alt=""/>
                                             :
                                             <img src="/images/mine/praise_praise_icon.png" alt=""/>
@@ -92,7 +91,11 @@ export default class commented extends React.Component{
         this.props.history.goBack();
     }
 
-    dianzan = (id)=> {
-
+    dianzan = (index)=> {
+        let newArr = this.state.gData;
+        newArr[index].flagZan = !newArr[index].flagZan;
+        this.setState({
+            gData: newArr
+        })
     }
 }

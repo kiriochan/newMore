@@ -1,0 +1,98 @@
+.scroll-wrap{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#commented{
+    width: 100%;height: 100%;
+    background-color: #F1F1F1;
+    z-index: 10;
+    overflow: hidden;
+    .commented-wrap{
+        overflow: hidden;
+        padding-bottom: 6rem;
+        .commented-con{
+            width: 100%; height: 100%;
+            .commented-list{
+                padding: 10pt 20pt;
+                background-color: #fff;
+                overflow: hidden;
+                margin-bottom: 10pt;
+                .com-con{
+                    .com-personal{
+                        display: flex;
+                        justify-content: space-between;
+                        .com-name{
+                            display: flex;
+                            span{
+                                margin: 5pt;
+                                color: #36465D;
+                                font-size: .875rem;
+                            }
+                        }
+                        .com-head{
+                            width: 40pt;
+                            height: 40pt;
+                            border-radius: 50%;
+                        }
+                        .com-zan{
+                            float: right;
+                            display: flex;
+                            img{
+                                width: 16pt;
+                                height: 16pt;
+                            }
+                            span{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                    .com-main{
+                        line-height: 2.25rem;
+                        font-size: .75rem;
+                        color: #2C2C2C;
+                    }
+                }
+
+
+                .com-diff{
+                    background-color: #CFD8E6;
+                    display: flex;
+                    padding: 10pt 10pt;
+                    img{
+                        margin-right: 10pt;
+                    }
+                    h4{
+                        color: #2C2C2C;
+                        font-size: .875rem;
+                        font-weight: 400;
+                        line-height: 1.875rem;
+                    }
+                    h5{
+                        font-size: .75rem;
+                        font-weight: 100;
+                        color: #8E8E8E;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 1;
+                        overflow: hidden;
+                    }
+                }
+
+                .com-time{
+                    font-size: .75rem;
+                    color: #8E8E8E;
+                    float: right;
+                    line-height: 1.625rem;
+                }
+            }
+        }
+
+        .no-more{
+            text-align: center;
+            font-size: .875rem;
+            color: #8E8E8E;
+        }
+    }
+}

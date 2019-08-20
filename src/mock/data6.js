@@ -1,6 +1,6 @@
 import Mock from 'mockjs';
 const Random = Mock.Random;
-Mock.mock('/getdata5', {
+Mock.mock('/getdata6', {
     'code': 0,
     'data': {
         'list|3-15': [{
@@ -10,7 +10,9 @@ Mock.mock('/getdata5', {
             'title': '@cword(2,10)',
             'text': '@cparagraph(2)',
             'comtime':'@datetime(M月d日 H:m)',
-            'flagZan': true
+            'name': '@cname',
+            'flagZan': true,
+            'one|1-150': 1
         }]
     },
     'message': 'ok'
