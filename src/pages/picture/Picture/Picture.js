@@ -1,43 +1,109 @@
 import React from 'react'
-import {Link, Switch} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import './style.scss'
+import AppScroll from '../../../components/app-scroll/app-scroll'
+// import { Drawer, Button, Radio } from 'antd';
+// import 'antd/dist/antd.css'
 
-import Header from '../../../components/app-header/app-header'
 
-const Mine = (props)=>{
-    let mineList = [
-        {id: 1, name: '我的收藏', path: ''},
-        {id: 2, name: '我的观点', path: ''},
-        {id: 3, name: '我关注的用户', path: ''},
-        {id: 4, name: '关注我的用户', path: ''},
-        {id: 5, name: '我赞过的观点', path: ''},
+// const RadioGroup = Radio.Group;
+class Picture extends React.Component{
+    // state = { visible: false, placement: 'left' };
+    // showDrawer = () => {
+    //     this.setState({
+    //       visible: true,
+    //     });
+    //   };
+    
+    //   onClose = () => {
+    //     this.setState({
+    //       visible: false,
+    //     });
+    //   };
+    
+    //   onChange = e => {
+    //     this.setState({
+    //       placement: e.target.value,
+    //     });
+    //   };
 
-    ];
+    render(){
+        const navlist = [
+            {id:1,num1:"364", num2:"360", purl:"sadasd"},
+            {id:2,num1:"360", num2:"360", purl:"sadasd"},
+            {id:3,num1:"363", num2:"363", purl:"sadasd"}, 
+            {id:4,num1:"360", num2:"366", purl:"sadasd"},
+        ]
+    
+        return (
+            <div className="page" id="pic">
+                <div className="p-title border-bottom">
+                    <p></p>
+                    <p>图说</p>
+                    <p className="iconfont">&#xe692;</p>
+                </div>
+    
+                <div className="pic_title">
+                
+                <p className="Newes"><span>最新</span></p>
+                <p className="Hottest"><span>最新</span></p>
+                </div>
+                
+                <div className="pic-list">
+                    <AppScroll>
+                    {   
+                        navlist.map(item=>(
+                        <div className="list" key={item.id}>   
+                            <div className="imglist">
+                            <img src="/images/logo.jpg" className="pic-img" alt=""/>
+                            </div> 
+                            <div className="pic-nav">
+                                <li className="pic-items" key={item.id}>
+                                    <Link to="/picture/viewpoint"><p><i className="iconfont">&#xe61c;</i>{item.num1}</p></Link>
+                                    <p>
+                                    <i className="iconfont">&#xe607;</i>
+                                    {item.num2}</p>
+                                    <i className="iconfont">&#xe668;</i>
+                                </li>
+                            </div>
+                        </div>
+                        ))
+                    } 
+                    </AppScroll>
+                </div>
+   
+                {/* <div>
+                    <RadioGroup
+                    style={{ marginRight: 8 }}
+                    defaultValue={this.state.placement}
+                    onChange={this.onChange}
+                    >
+                    <Radio value="top">top</Radio>
+                    <Radio value="right">right</Radio>
+                    <Radio value="bottom">bottom</Radio>
+                    <Radio value="left">left</Radio> 
+                    </RadioGroup>
 
-    return (
-        <div className="page" id="mine">
-            <Header title="我的" />
-
-            <div className="mine-banner">
-                <Link>头像</Link>
-                <Link><span>李雪琴</span><span>女</span></Link>
-                <Link to="/home/coupon"><span>点击修改个人资料</span></Link>
-            </div>
-
-            <ul className="mine-nav">
-            {
-                mineList.map(item=>(
-                    <li className="mine-items" key={item.id}>
-                        <Link to={item.path}>
-                            <span>{item.name}</span>
-                            <span className="to-right">></span>
-                        </Link>
-                    </li>
-                ))
-            }
-            </ul>
+                    <Button >
+                    Open
+                    </Button>
+                    
+                    <Drawer
+                    title="Basic Drawer"
+                    placement={this.state.placement}
+                    closable={false}
+                    onClose={this.onClose}
+                    visible={this.state.visible}
+                    >
+                    <p>Some contents...</p>
+                    <p>Some contents...</p>
+                    <p>Some contents...</p>
+                    </Drawer>
+                </div> */}
         </div>
-    )
+        )
+    }
 }
 
-export default Mine;
+
+export default Picture;

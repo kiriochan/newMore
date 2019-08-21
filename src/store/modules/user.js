@@ -1,20 +1,16 @@
-// duck mode
 
 import api from '../../request/api'
 import {post, get} from '../../request/request'
 
-// types
 const CHANGE_LOGIN_TIP = 'user/change_login_tip';
 const SET_LOGIN_STATUS = 'user/set_login_status';
 
-// state
 const initialState = {
-    isLogin: false,
+    isLogin: true,
     loginTip: '获取',
     userInfo: {}
 };
 
-// reducer
 export default (state = initialState, action)=>{
     switch (action.type) {
         case CHANGE_LOGIN_TIP:

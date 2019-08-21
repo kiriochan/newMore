@@ -13,7 +13,10 @@ const Discover = lazy(()=>import('./pages/discover/Discover/Discover'));
 
 const NotFind = lazy(()=>import('./pages/common/NotFind/NotFind'));
 const Login = lazy(()=>import('./pages/common/Login/Login'));
-
+const Coupon = lazy(()=>import('./pages/common/Coupon/Coupon'));
+const History = lazy(()=>import('./pages/news/News/children/history'));
+const viewpoint = lazy(()=>import('./pages/picture/Picture/children/viewpoint'));
+const his = lazy(()=>import('./pages/picture/Picture/his/his'));
 
 const AppPanel = (props)=>{
     return (
@@ -21,7 +24,7 @@ const AppPanel = (props)=>{
             <div className="app">
                 <Switch>
                     <Route path="/" exact render={()=>{
-                        return <Redirect to="/news" />
+                        return <Redirect to="/mine" />
                     }}/>
                     <Route path="/news" component={News}/>
                     <Route path='/picture/:flag' component={Picture}/>
@@ -30,6 +33,11 @@ const AppPanel = (props)=>{
                     <Route component={NotFind}/>
                 </Switch>
                 
+                    <Route path='/picture/viewpoint' component={viewpoint}/>
+                    <Route path='/picture/his' component={his}/>
+                    
+                    <Route path='/discover/coupon' component={Coupon} />
+                    <Route path='/news/history' component={History} />
                 <TabBar />
             </div>
         </Router>
